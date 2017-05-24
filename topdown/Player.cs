@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,14 @@ namespace topdown
 {
     class Player
     {
+        private Vector2 position;
+        private int hp = 0;
+        
+        public Player()
+        {
+
+        }
+
+
     }
 }
