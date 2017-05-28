@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace topdown
 {
-    class Player
+    class Player : DrawableGameComponent
     {
         private Vector2 position;
         private int hp = 0;
         
-        public Player()
+        public Player(Game game) : base (game)
         {
 
         }
