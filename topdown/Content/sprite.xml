@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:ns="Microsoft.Xna.Framework">
+
+  <Asset Type="TDObjects.Sprite[]">
+    <Item>
+      <textureName>megamanfull</textureName>
+      <rows>6</rows>
+      <columns>6</columns>
+      <offset>4 6</offset>
+      <actualTextureSize>20 23</actualTextureSize>
+    </Item>
+  </Asset>
+
+</XnaContent>

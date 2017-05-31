@@ -10,6 +10,7 @@
 
 #-------------------------------- References --------------------------------#
 
+/reference:..\..\TDObjects\bin\Debug\TDObjects.dll
 
 #---------------------------------- Content ---------------------------------#
 
@@ -24,4 +25,9 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:harvestmoon_frames.png
+
+#begin sprite.xml
+/importer:XmlImporter
+/processor:PassThroughProcessor
+/build:sprite.xml
 
