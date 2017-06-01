@@ -15,6 +15,8 @@ namespace TDObjects
         public int columns;
         public Vector2 offset;
         public Vector2 actualTextureSize;
+        public AnimationSpec[] animations;
+
     }
 
     public class AnimationSpec
