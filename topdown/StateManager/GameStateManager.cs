@@ -95,5 +95,6 @@ namespace topdown.StateManager
                 StateChanged(this, null);
         }
         #endregion
-    }
+    }
+
 }

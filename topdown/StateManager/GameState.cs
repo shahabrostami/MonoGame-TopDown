@@ -35,7 +35,8 @@ namespace topdown.StateManager {
         public GameState Inst
         {
             get { return inst; }
-        }   
+        }
+   
         #endregion
 
         #region Constructor Region
