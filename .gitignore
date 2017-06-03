@@ -45,3 +45,6 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+topdown/obj/x86/Debug/CoreCompileInputs.cache
+*.cache
+topdown/obj/x86/Debug/DesignTimeResolveAssemblyReferencesInput.cache
