@@ -4,7 +4,9 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Bro-W/Documents/Visual Studio 2015/Projects/monogame-topdown/topdown/Content/sprite.xml</File>
-    <File>C:/Users/Bro-W/Documents/Visual Studio 2015/Projects/monogame-topdown/topdown/Content/harvestmoon_frames.png</File>
+    <File>C:/Users/rostami/Documents/Visual Studio 2017/Projects/monogame-topdown/topdown/Content/Sprites/Hero/harvestmoon_frames.png</File>
+    <File>C:/Users/rostami/Documents/Visual Studio 2017/Projects/monogame-topdown/topdown/Content/Sprites/Hero/sprite.xml</File>
+    <File>C:/Users/rostami/Documents/Visual Studio 2017/Projects/monogame-topdown/topdown/Content/Fonts/UIFont.spritefont</File>
+    <File>C:/Users/rostami/Documents/Visual Studio 2017/Projects/monogame-topdown/topdown/Content/GameScreens/heman.jpg</File>
   </SourceFiles>
 </SourceFileCollection>

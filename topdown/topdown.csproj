@@ -42,6 +42,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Game1.cs" />
+    <Compile Include="GameStates\BaseGameState.cs" />
+    <Compile Include="GameStates\TitleIntroState.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
@@ -60,11 +62,31 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\GameScreens\heman.jpg" />
+    <Content Include="Content\Sprites\Hero\harvestmoon_frames.png" />
+    <Content Include="Content\Sprites\Hero\harvestmoon_original.gif" />
+    <Content Include="Content\Sprites\Hero\harvestmoon_original.png" />
+    <Content Include="Content\Sprites\Hero\sprite.xml" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+    <None Include="Content\bin\Windows\Fonts\UIFont.xnb" />
+    <None Include="Content\bin\Windows\GameScreens\heman.xnb" />
+    <None Include="Content\bin\Windows\harvestmoon_frames.xnb" />
+    <None Include="Content\bin\Windows\sprite.xnb" />
+    <None Include="Content\bin\Windows\Sprites\Hero\harvestmoon_frames.xnb" />
+    <None Include="Content\bin\Windows\Sprites\Hero\sprite.xnb" />
+    <None Include="Content\Fonts\UIFont.spritefont" />
+    <None Include="Content\obj\Windows\.mgcontent" />
+    <None Include="Content\obj\Windows\Fonts\UIFont.mgcontent" />
+    <None Include="Content\obj\Windows\GameScreens\heman.mgcontent" />
+    <None Include="Content\obj\Windows\harvestmoon_frames.mgcontent" />
+    <None Include="Content\obj\Windows\sprite.mgcontent" />
+    <None Include="Content\obj\Windows\Sprites\Hero\harvestmoon_frames.mgcontent" />
+    <None Include="Content\obj\Windows\Sprites\Hero\sprite.mgcontent" />
+    <None Include="Content\Sprites\Hero\harvestmoon_frames.ase" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

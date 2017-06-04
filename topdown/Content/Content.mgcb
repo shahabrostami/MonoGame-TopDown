@@ -14,7 +14,7 @@
 
 #---------------------------------- Content ---------------------------------#
 
-#begin harvestmoon_frames.png
+#begin Sprites/Hero/harvestmoon_frames.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -24,10 +24,29 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:harvestmoon_frames.png
+/build:Sprites/Hero/harvestmoon_frames.png
 
-#begin sprite.xml
+#begin Sprites/Hero/sprite.xml
 /importer:XmlImporter
 /processor:PassThroughProcessor
-/build:sprite.xml
+/build:Sprites/Hero/sprite.xml
+
+#begin Fonts/UIFont.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Fonts/UIFont.spritefont
+
+#begin GameScreens/heman.jpg
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:GameScreens/heman.jpg
 
