@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\Xin.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameStates\BaseGameState.cs" />
     <Compile Include="GameStates\TitleIntroState.cs" />
@@ -62,7 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\GameScreens\heman.jpg" />
+    <Content Include="Content\GameScreens\titlescreen.jpg" />
     <Content Include="Content\Sprites\Hero\harvestmoon_frames.png" />
     <Content Include="Content\Sprites\Hero\harvestmoon_original.gif" />
     <Content Include="Content\Sprites\Hero\harvestmoon_original.png" />

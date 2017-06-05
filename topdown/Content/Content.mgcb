@@ -38,7 +38,7 @@
 /processorParam:TextureFormat=Compressed
 /build:Fonts/UIFont.spritefont
 
-#begin GameScreens/heman.jpg
+#begin GameScreens/titlescreen.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -48,5 +48,5 @@
 /processorParam:ResizeToPowerOfTwo=False
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
-/build:GameScreens/heman.jpg
+/build:GameScreens/titlescreen.jpg
 

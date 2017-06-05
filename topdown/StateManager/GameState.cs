@@ -47,6 +47,8 @@ namespace topdown.StateManager {
 
             content = Game.Content;
             childComponents = new List<GameComponent>();
+
+            manager = (IStateManager)Game.Services.GetService(typeof(IStateManager));
         }
 
 

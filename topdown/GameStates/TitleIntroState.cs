@@ -28,8 +28,7 @@ namespace topdown.GameStates
             string message;
             #endregion
             #region Constructor Region
-            public TitleIntroState(Game game)
-            : base(game)
+            public TitleIntroState(Game game) : base(game)
             {
                 game.Services.AddService(typeof(ITitleIntroState), this);
             }
@@ -45,10 +44,10 @@ namespace topdown.GameStates
             protected override void LoadContent()
             {
                 background = content.Load<Texture2D>(@"GameScreens\titlescreen");
-                font = content.Load<SpriteFont>(@"Fonts\InterfaceFont");
+                font = content.Load<SpriteFont>(@"Fonts\UIFont");
                 Vector2 size = font.MeasureString(message);
                 position = new Vector2((Game1.ScreenRectangle.Width - size.X) / 2,
-               Game1.ScreenRectangle.Bottom - 50 - font.LineSpacing);
+                Game1.ScreenRectangle.Bottom - 50 - font.LineSpacing);
                 base.LoadContent();
             }
             public override void Update(GameTime gameTime)
@@ -69,5 +68,6 @@ namespace topdown.GameStates
             }
             #endregion
         }
-    }
+    }
+
 }
