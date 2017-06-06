@@ -41,7 +41,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Components\MenuComponent.cs" />
     <Compile Include="Components\Xin.cs" />
+    <Compile Include="GameStates\MainMenuState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameStates\BaseGameState.cs" />
     <Compile Include="GameStates\TitleIntroState.cs" />
@@ -49,7 +51,7 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StateManager\GameState.cs" />
+    <Compile Include="GameStates\GameState.cs" />
     <Compile Include="StateManager\GameStateManager.cs" />
   </ItemGroup>
   <ItemGroup>

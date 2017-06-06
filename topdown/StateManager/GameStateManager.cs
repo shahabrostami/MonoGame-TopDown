@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using topdown.GameStates;
 
 namespace topdown.StateManager
 {
@@ -85,10 +86,12 @@ namespace topdown.StateManager
             AddState(state, index);
             OnStateChanged();
         }
+
         public bool ContainsState(GameState state)
         {
             return gameStates.Contains(state);
         }
+
         protected internal virtual void OnStateChanged()
         {
             if (StateChanged != null)

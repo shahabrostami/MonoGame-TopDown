@@ -10,6 +10,8 @@ namespace topdown.GameStates
     using Microsoft.Xna.Framework;
     using Microsoft.Xna.Framework.Graphics;
     using topdown.StateManager;
+    using topdown.Components;
+    using Microsoft.Xna.Framework.Input;
 
     namespace Avatars.GameStates
     {
@@ -27,12 +29,14 @@ namespace topdown.GameStates
             Vector2 position;
             string message;
             #endregion
+            
             #region Constructor Region
             public TitleIntroState(Game game) : base(game)
             {
                 game.Services.AddService(typeof(ITitleIntroState), this);
             }
             #endregion
+
             #region Method Region
             public override void Initialize()
             {
@@ -41,6 +45,7 @@ namespace topdown.GameStates
                 message = "PRESS SPACE TO CONTINUE";
                 base.Initialize();
             }
+
             protected override void LoadContent()
             {
                 background = content.Load<Texture2D>(@"GameScreens\titlescreen");
@@ -50,12 +55,19 @@ namespace topdown.GameStates
                 Game1.ScreenRectangle.Bottom - 50 - font.LineSpacing);
                 base.LoadContent();
             }
+
             public override void Update(GameTime gameTime)
             {
-                PlayerIndex index = PlayerIndex.One;
+                PlayerIndex? index = null;
                 elapsed += gameTime.ElapsedGameTime;
-                base.Update(gameTime);
+                if (Xin.CheckKeyReleased(Keys.Space) || Xin.CheckKeyReleased(Keys.Enter) ||
+               Xin.CheckMouseReleased(MouseButtons.Left))
+                {
+                    manager.ChangeState((MainMenuState)GameRef.StartMenuState, index);
+                }
+                base.Update(gameTime);
             }
+
             public override void Draw(GameTime gameTime)
             {
                 GameRef.SpriteBatch.Begin();
