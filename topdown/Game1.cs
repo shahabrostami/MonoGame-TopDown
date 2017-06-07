@@ -86,5 +86,6 @@ namespace topdown
             GraphicsDevice.Clear(Color.CornflowerBlue);
             base.Draw(gameTime);
         }
-    }
+    }
+
 }
