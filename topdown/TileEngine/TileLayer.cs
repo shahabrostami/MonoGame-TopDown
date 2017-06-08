@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Graphics;
+
 
 namespace topdown.TileEngine
 {
@@ -122,18 +123,19 @@ namespace topdown.TileEngine
 
             cameraPoint = Engine.VectorToCell(camera.Position);
             viewPoint = Engine.VectorToCell(
-            new Vector2(
-            (camera.Position.X + Engine.ViewportRectangle.Width),
-            (camera.Position.Y + Engine.ViewportRectangle.Height)));
+                new Vector2(
+                    (camera.Position.X + Engine.ViewportRectangle.Width),
+                    (camera.Position.Y + Engine.ViewportRectangle.Height)));
+
             min.X = Math.Max(0, cameraPoint.X - 1);
             min.Y = Math.Max(0, cameraPoint.Y - 1);
             max.X = Math.Min(viewPoint.X + 1, Width);
             max.Y = Math.Min(viewPoint.Y + 1, Height);
+
             destination = new Rectangle(0, 0, Engine.TileWidth, Engine.TileHeight);
             int tile;
 
             spriteBatch.Begin(SpriteSortMode.Deferred, BlendState.AlphaBlend, SamplerState.PointClamp, null, null, null, camera.Transformation);
-
             for (int y = min.Y; y < max.Y; y++)
             {
                 destination.Y = y * Engine.TileHeight;
@@ -149,5 +151,6 @@ namespace topdown.TileEngine
             spriteBatch.End();
         }
         #endregion
-    }
+    }
+
 }
