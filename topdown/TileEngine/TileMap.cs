@@ -16,12 +16,15 @@ namespace topdown.TileEngine
         TileLayer buildingLayer;
         TileLayer decorationLayer;
         Dictionary<string, Point> characters;
+
         [ContentSerializer]
         int mapWidth;
         [ContentSerializer]
         int mapHeight;
+
         TileSet tileSet;
         #endregion
+
         #region Property Region
         [ContentSerializer]
         public string MapName
@@ -29,63 +32,75 @@ namespace topdown.TileEngine
             get { return mapName; }
             private set { mapName = value; }
         }
+
         [ContentSerializer]
         public TileSet TileSet
         {
             get { return tileSet; }
             set { tileSet = value; }
         }
+
         [ContentSerializer]
         public TileLayer GroundLayer
         {
             get { return groundLayer; }
             set { groundLayer = value; }
         }
+
         [ContentSerializer]
         public TileLayer EdgeLayer
         {
             get { return edgeLayer; }
             set { edgeLayer = value; }
         }
+
         [ContentSerializer]
         public TileLayer BuildingLayer
         {
             get { return buildingLayer; }
             set { buildingLayer = value; }
         }
+
         [ContentSerializer]
         public Dictionary<string, Point> Characters
         {
             get { return characters; }
             private set { characters = value; }
         }
+
         public int MapWidth
         {
             get { return mapWidth; }
         }
+
         public int MapHeight
         {
             get { return mapHeight; }
         }
+
         public int WidthInPixels
         {
             get { return mapWidth * Engine.TileWidth; }
         }
+
         public int HeightInPixels
         {
             get { return mapHeight * Engine.TileHeight; }
         }
         #endregion
+
         #region Constructor Region
         private TileMap()
         {
         }
+
         private TileMap(TileSet tileSet, string mapName)
         {
             this.characters = new Dictionary<string, Point>();
             this.tileSet = tileSet;
             this.mapName = mapName;
         }
+
         public TileMap(
         TileSet tileSet,
         TileLayer groundLayer,
@@ -103,39 +118,48 @@ namespace topdown.TileEngine
             mapHeight = groundLayer.Height;
         }
         #endregion
+
         #region Method Region
         public void SetGroundTile(int x, int y, int index)
         {
             groundLayer.SetTile(x, y, index);
         }
+
         public int GetGroundTile(int x, int y)
         {
             return groundLayer.GetTile(x, y);
         }
+
         public void SetEdgeTile(int x, int y, int index)
         {
             edgeLayer.SetTile(x, y, index);
         }
+
         public int GetEdgeTile(int x, int y)
         {
             return edgeLayer.GetTile(x, y);
         }
+
         public void SetBuildingTile(int x, int y, int index)
         {
             buildingLayer.SetTile(x, y, index);
         }
+
         public int GetBuildingTile(int x, int y)
         {
             return buildingLayer.GetTile(x, y);
         }
+
         public void SetDecorationTile(int x, int y, int index)
         {
             decorationLayer.SetTile(x, y, index);
         }
+
         public int GetDecorationTile(int x, int y)
         {
             return decorationLayer.GetTile(x, y);
         }
+
         public void FillEdges()
         {
             for (int y = 0; y < mapHeight; y++)
@@ -146,6 +170,7 @@ namespace topdown.TileEngine
                 }
             }
         }
+
         public void FillBuilding()
         {
             for (int y = 0; y < mapHeight; y++)
@@ -156,6 +181,7 @@ namespace topdown.TileEngine
                 }
             }
         }
+
         public void FillDecoration()
         {
             for (int y = 0; y < mapHeight; y++)
@@ -166,6 +192,7 @@ namespace topdown.TileEngine
                 }
             }
         }
+
         public void Update(GameTime gameTime)
         {
             if (groundLayer != null)
@@ -177,6 +204,7 @@ namespace topdown.TileEngine
             if (decorationLayer != null)
                 decorationLayer.Update(gameTime);
         }
+
         public void Draw(GameTime gameTime, SpriteBatch spriteBatch, Camera camera)
         {
             if (groundLayer != null)
@@ -190,4 +218,4 @@ namespace topdown.TileEngine
         }
         #endregion
     }
-}
+}
