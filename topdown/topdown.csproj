@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="Components\MenuComponent.cs" />
     <Compile Include="Components\Xin.cs" />
+    <Compile Include="GameStates\GamePlayState.cs" />
     <Compile Include="GameStates\MainMenuState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameStates\BaseGameState.cs" />

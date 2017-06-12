@@ -15,6 +15,7 @@ namespace topdown
         GameStateManager gameStateManager;
         ITitleIntroState titleIntroState;
         IMainMenuState startMenuState;
+        IGamePlayState gamePlayState;
         static Rectangle screenRectangle;
 
         public SpriteBatch SpriteBatch
@@ -42,6 +43,11 @@ namespace topdown
             get { return startMenuState; }
         }
 
+        public IGamePlayState GamePlayState
+        {
+            get { return gamePlayState; }
+        }
+        
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -54,6 +60,7 @@ namespace topdown
             this.IsMouseVisible = true;
             titleIntroState = new TitleIntroState(this);
             startMenuState = new MainMenuState(this);
+            gamePlayState = new GamePlayState(this);
 
             gameStateManager.ChangeState((TitleIntroState)titleIntroState, PlayerIndex.One);
         }
