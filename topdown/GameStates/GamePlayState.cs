@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using topdown.TileEngine;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace topdown.GameStates
 {
@@ -20,6 +21,7 @@ namespace topdown.GameStates
         Engine engine = new Engine(Game1.ScreenRectangle, 64, 64);
         TileMap map;
         Camera camera;
+
         public GamePlayState(Game game)
         : base(game)
         {
@@ -43,13 +45,26 @@ namespace topdown.GameStates
         public override void Draw(GameTime gameTime)
         {
             base.Draw(gameTime);
+            if (map != null && camera != null)
+                map.Draw(gameTime, GameRef.SpriteBatch, camera);
         }
-
         public void SetUpNewGame()
         {
+            Texture2D tiles = GameRef.Content.Load<Texture2D>(@"Tiles\tileset1");
+            TileSet set = new TileSet(8, 8, 32, 32);
+            set.Texture = tiles;
+            TileLayer background = new TileLayer(200, 200);
+            TileLayer edge = new TileLayer(200, 200);
+            TileLayer building = new TileLayer(200, 200);
+            TileLayer decor = new TileLayer(200, 200);
+            map = new TileMap(set, background, edge, building, decor, "test-map");
+            map.FillEdges();
+            map.FillBuilding();
+            map.FillDecoration();
+            camera = new Camera();
         }
 
-        public void LoadExistingGame()
+            public void LoadExistingGame()
         {
         }
 
@@ -57,4 +72,4 @@ namespace topdown.GameStates
         {
         }
     }
-}
+}

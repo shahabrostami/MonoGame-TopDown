@@ -15,7 +15,8 @@ namespace topdown
         GameStateManager gameStateManager;
         ITitleIntroState titleIntroState;
         IMainMenuState startMenuState;
-        IGamePlayState gamePlayState;
+        IGamePlayState gamePlayState;
+
         static Rectangle screenRectangle;
 
         public SpriteBatch SpriteBatch
@@ -60,7 +61,8 @@ namespace topdown
             this.IsMouseVisible = true;
             titleIntroState = new TitleIntroState(this);
             startMenuState = new MainMenuState(this);
-            gamePlayState = new GamePlayState(this);
+            gamePlayState = new GamePlayState(this);
+
 
             gameStateManager.ChangeState((TitleIntroState)titleIntroState, PlayerIndex.One);
         }

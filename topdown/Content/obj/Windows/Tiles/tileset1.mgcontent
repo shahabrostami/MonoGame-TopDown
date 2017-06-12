@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/GameScreens/titlescreen.jpg</SourceFile>
-  <SourceTime>2017-06-05T17:11:25.1050167+01:00</SourceTime>
-  <DestFile>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/bin/Windows/GameScreens/titlescreen.xnb</DestFile>
-  <DestTime>2017-06-12T19:59:52.2750004+01:00</DestTime>
+  <SourceFile>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/Tiles/tileset1.png</SourceFile>
+  <SourceTime>2017-06-12T19:58:56.0811189+01:00</SourceTime>
+  <DestFile>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/bin/Windows/Tiles/tileset1.xnb</DestFile>
+  <DestTime>2017-06-12T19:59:52.3100235+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T15:05:36+00:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

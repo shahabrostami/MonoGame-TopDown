@@ -104,7 +104,7 @@ namespace topdown.Components
             }
             height -= 50;
         }
-        public void Update(GameTime gameTime, PlayerIndex index)
+        public void Update(GameTime gameTime)
         {
             Vector2 menuPosition = position;
             Point p = Xin.MouseState.Position;

@@ -20,7 +20,7 @@ namespace topdown.GameStates
         SpriteFont spriteFont;
         MenuComponent menuComponent;
         #endregion
-        
+
         #region Property Region
         #endregion
 
@@ -31,7 +31,7 @@ namespace topdown.GameStates
             game.Services.AddService(typeof(IMainMenuState), this);
         }
         #endregion
-        
+
         #region Method Region
         public override void Initialize()
         {
@@ -54,17 +54,23 @@ namespace topdown.GameStates
 
         public override void Update(GameTime gameTime)
         {
-            menuComponent.Update(gameTime, PlayerIndex.One);
+            menuComponent.Update(gameTime);
             if (Xin.CheckKeyReleased(Keys.Space) || Xin.CheckKeyReleased(Keys.Enter) ||
            (menuComponent.MouseOver && Xin.CheckMouseReleased(MouseButtons.Left)))
             {
                 if (menuComponent.SelectedIndex == 0)
                 {
                     Xin.FlushInput();
+                    GameRef.GamePlayState.SetUpNewGame();
+                    GameRef.GamePlayState.StartGame();
+                    manager.PushState((GamePlayState)GameRef.GamePlayState, PlayerIndexInControl);
                 }
                 else if (menuComponent.SelectedIndex == 1)
                 {
                     Xin.FlushInput();
+                    GameRef.GamePlayState.LoadExistingGame();
+                    GameRef.GamePlayState.StartGame();
+                    manager.PushState((GamePlayState)GameRef.GamePlayState, PlayerIndexInControl);
                 }
                 else if (menuComponent.SelectedIndex == 2)
                 {
