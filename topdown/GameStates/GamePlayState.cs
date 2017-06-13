@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using topdown.TileEngine;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using topdown.Components;
+using Microsoft.Xna.Framework.Input;
 
 namespace topdown.GameStates
 {
@@ -39,6 +41,53 @@ namespace topdown.GameStates
 
         public override void Update(GameTime gameTime)
         {
+            Vector2 motion = Vector2.Zero;
+            if (Xin.KeyboardState.IsKeyDown(Keys.W) && Xin.KeyboardState.IsKeyDown(Keys.A))
+            {
+                motion.X = -1;
+                motion.Y = -1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.W) &&
+                        Xin.KeyboardState.IsKeyDown(Keys.D))
+            {
+                motion.X = 1;
+                motion.Y = -1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.S) &&
+                        Xin.KeyboardState.IsKeyDown(Keys.A))
+            {
+                motion.X = -1;
+                motion.Y = 1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.S) &&
+                        Xin.KeyboardState.IsKeyDown(Keys.D))
+            {
+                motion.X = 1;
+                motion.Y = 1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.W))
+            {
+                motion.Y = -1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.S))
+            {
+                motion.Y = 1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.A))
+            {
+                motion.X = -1;
+            }
+            else if (Xin.KeyboardState.IsKeyDown(Keys.D))
+            {
+                motion.X = 1;
+            }
+            if (motion != Vector2.Zero)
+            {
+                motion.Normalize();
+                motion *= camera.Speed;
+                camera.Position += motion;
+                camera.LockCamera(map, Game1.ScreenRectangle);
+            }
             base.Update(gameTime);
         }
 
@@ -48,6 +97,7 @@ namespace topdown.GameStates
             if (map != null && camera != null)
                 map.Draw(gameTime, GameRef.SpriteBatch, camera);
         }
+
         public void SetUpNewGame()
         {
             Texture2D tiles = GameRef.Content.Load<Texture2D>(@"Tiles\tileset1");
@@ -64,7 +114,7 @@ namespace topdown.GameStates
             camera = new Camera();
         }
 
-            public void LoadExistingGame()
+        public void LoadExistingGame()
         {
         }
 

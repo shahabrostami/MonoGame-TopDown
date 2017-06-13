@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="GameStates\GameState.cs" />
     <Compile Include="StateManager\GameStateManager.cs" />
+    <Compile Include="TileEngine\Animation.cs" />
     <Compile Include="TileEngine\Camera.cs" />
     <Compile Include="TileEngine\Engine.cs" />
     <Compile Include="TileEngine\TileLayer.cs" />
@@ -72,15 +73,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\GameScreens\titlescreen.jpg" />
+    <Content Include="Content\Misc\wooden-button.png" />
     <Content Include="Content\Sprites\Hero\harvestmoon_frames.png" />
     <Content Include="Content\Sprites\Hero\harvestmoon_original.gif" />
     <Content Include="Content\Sprites\Hero\harvestmoon_original.png" />
     <Content Include="Content\Sprites\Hero\sprite.xml" />
+    <Content Include="Content\Tiles\tileset1.png" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
-    <None Include="app.manifest" />
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Content\bin\Windows\Fonts\UIFont.xnb" />
     <None Include="Content\bin\Windows\GameScreens\heman.xnb" />
     <None Include="Content\bin\Windows\harvestmoon_frames.xnb" />

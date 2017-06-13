@@ -46,8 +46,8 @@ namespace topdown.TileEngine
         {
             ViewportRectangle = viewPort;
             camera = new Camera();
-            TileWidth = 64;
-            TileHeight = 64;
+            TileWidth = 32;
+            TileHeight = 32;
         }
         public Engine(Rectangle viewPort, int tileWidth, int tileHeight)
         : this(viewPort)
