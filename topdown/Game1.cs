@@ -1,10 +1,12 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.Collections.Generic;
 using topdown.Components;
 using topdown.GameStates;
 using topdown.GameStates.Avatars.GameStates;
 using topdown.StateManager;
+using topdown.TileEngine;
 
 namespace topdown
 {
@@ -16,7 +18,7 @@ namespace topdown
         ITitleIntroState titleIntroState;
         IMainMenuState startMenuState;
         IGamePlayState gamePlayState;
-
+        Dictionary<AnimationKey, Animation> playerAnimations = new Dictionary<AnimationKey, Animation>();        
         static Rectangle screenRectangle;
 
         public SpriteBatch SpriteBatch
@@ -48,7 +50,12 @@ namespace topdown
         {
             get { return gamePlayState; }
         }
-        
+
+        public Dictionary<AnimationKey, Animation> PlayerAnimations
+        {
+            get { return playerAnimations; }
+        }
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -70,6 +77,19 @@ namespace topdown
         protected override void Initialize()
         {
             Components.Add(new Xin(this));
+
+            Animation animation = new Animation(3, 32, 32, 0, 0);
+            playerAnimations.Add(AnimationKey.WalkDown, animation);
+
+            animation = new Animation(3, 32, 32, 0, 32);
+            playerAnimations.Add(AnimationKey.WalkLeft, animation);
+
+            animation = new Animation(3, 32, 32, 0, 64);
+            playerAnimations.Add(AnimationKey.WalkRight, animation);
+
+            animation = new Animation(3, 32, 32, 0, 96);
+            playerAnimations.Add(AnimationKey.WalkUp, animation);
+
             base.Initialize();
         }
 

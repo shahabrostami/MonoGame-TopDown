@@ -4,6 +4,8 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
+    <File>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/PlayerSprites/femaleplayer.png</File>
+    <File>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/PlayerSprites/maleplayer.png</File>
     <File>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/Sprites/Hero/harvestmoon_frames.png</File>
     <File>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/Sprites/Hero/sprite.xml</File>
     <File>C:/Users/IBM_ADMIN/Documents/Visual Studio 2017/Projects/topdown/monogame-topdown/topdown/Content/Fonts/UIFont.spritefont</File>
