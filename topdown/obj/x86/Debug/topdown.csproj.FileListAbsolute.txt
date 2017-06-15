@@ -61,3 +61,5 @@ C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdow
 C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdown\topdown\obj\x86\Debug\topdown.pdb
 C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdown\topdown\bin\Windows\x86\Debug\Content\Misc\wooden-button.xnb
 C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdown\topdown\bin\Windows\x86\Debug\Content\Tiles\tileset1.xnb
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdown\topdown\bin\Windows\x86\Debug\Content\PlayerSprites\femaleplayer.xnb
+C:\Users\IBM_ADMIN\Documents\Visual Studio 2017\Projects\topdown\monogame-topdown\topdown\bin\Windows\x86\Debug\Content\PlayerSprites\maleplayer.xnb
