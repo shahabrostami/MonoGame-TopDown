@@ -18,7 +18,8 @@ namespace topdown
         ITitleIntroState titleIntroState;
         IMainMenuState startMenuState;
         IGamePlayState gamePlayState;
-        Dictionary<AnimationKey, Animation> playerAnimations = new Dictionary<AnimationKey, Animation>();        
+        Dictionary<AnimationKey, Animation> playerAnimations = new Dictionary<AnimationKey, Animation>();
+        
         static Rectangle screenRectangle;
 
         public SpriteBatch SpriteBatch
