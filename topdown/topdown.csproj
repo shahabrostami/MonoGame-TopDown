@@ -41,10 +41,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Components\AvatarComponents\Avatar.cs" />
-    <Compile Include="Components\AvatarComponents\IMove..cs" />
+    <Compile Include="AvatarComponents\Avatar.cs" />
+    <Compile Include="AvatarComponents\IMove..cs" />
+    <Compile Include="CharacterComponents\Character.cs" />
+    <Compile Include="CharacterComponents\ICharacter.cs" />
     <Compile Include="Components\MenuComponent.cs" />
-    <Compile Include="Components\PlayerComponents\Player.cs" />
+    <Compile Include="PlayerComponents\Player.cs" />
     <Compile Include="Components\Xin.cs" />
     <Compile Include="GameStates\GamePlayState.cs" />
     <Compile Include="GameStates\MainMenuState.cs" />
